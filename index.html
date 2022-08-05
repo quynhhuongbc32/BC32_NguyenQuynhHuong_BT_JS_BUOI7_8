@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>BT-JS Buổi 7-8 - Array</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label>Nhập số n</label>
+              <input type="number" class="form-control my-2"  placeholder="Nhập vào số n" id="number"/>
+            </div>
+            <button class="btn btn-success my-2" onclick="addNumber()">Thêm số</button>
+            <div class="card-footer text-white text-center bg-success " id="showInfoTotal"></div>
+
+            <button class="btn btn-success my-2" onclick="sum()">Tính tổng số dương</button>
+            <div class="card-footer text-white text-center bg-success " id="sum"></div>
+
+            <button class="btn btn-success my-2" onclick="count()">Đếm các số dương</button>
+            <div class="card-footer text-white text-center bg-success " id="count"></div>
+
+            <button class="btn btn-success my-2" onclick="min()">Số nhỏ nhất </button>
+            <div class="card-footer text-white text-center bg-success " id="min"></div>
+
+            <button class="btn btn-success my-2" onclick="minInt()">Số dương nhỏ nhất </button>
+            <div class="card-footer text-white text-center bg-success " id="minInt"></div>
+
+            <button class="btn btn-success my-2" onclick="find()">Tìm số chẵn cuối cùng </button>
+            <div class="card-footer text-white text-center bg-success " id="find"></div>
+
+            <div class="col-12 col-lg-6">
+                <input type="number" class="form-control my-2" id="input1"
+                    placeholder="Nhập số vị trí 1">
+            </div>
+            <div class="col-12 col-lg-6">
+                <input type="number" class="form-control" id="input2"
+                    placeholder="Nhập số vị trí 2">
+            </div>
+            <button class="btn btn-success my-2" onclick="change()">Đổi chỗ 2 giá trị </button>
+            <div class="card-footer text-white text-center bg-success " id="change"></div>
+
+            <button class="btn btn-success my-2" onclick="swap()">Sắp xếp mảng theo thứ tự tăng dần </button>
+            <div class="card-footer text-white text-center bg-success " id="swap"></div>
+
+            <button class="btn btn-success my-2" onclick="findPrime()">Tìm số nguyên tố </button>
+            <div class="card-footer text-white text-center bg-success " id="findPrime"></div>
+
+            <div class="form-group">
+              <input type="number" class="form-control my-2"  placeholder="Nhập vào số n" id="number1"/>
+            </div>
+            <button class="btn btn-success my-2" onclick="add()">Thêm số</button>
+            <div class="card-footer text-white text-center bg-success " id="showInt"></div>
+            <button class="btn btn-success my-2" onclick="Int()">Đếm các số nguyên</button>
+            <div class="card-footer text-white text-center bg-success " id="Int"></div>
+
+            <button class="btn btn-success my-2" onclick="vergelyk()">So sánh số dương và số âm</button>
+            <div class="card-footer text-white text-center bg-success " id="vergelyk"></div>
+          </div>
+        </div>
+    </div>
+  </br>
+</br>
+
+</br>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
