@@ -1,17 +1,18 @@
-let numbers = [4,3,2,45,64];
+let numbers = [];
 let numbers1 = [];
+let numbersint = [];
 
 
 function addNumber() {
-  // DOM
-  let number = +document.getElementById("number").value;
-  // thêm số vào mảng
-  numbers.push(number);
-  document.getElementById("showInfoTotal").innerHTML = "Các số vừa nhập là : " + numbers;
+   // DOM
+let number = +document.getElementById("number").value;
+   // thêm số vào mảng
+numbers.push(number);
+document.getElementById("showInfoTotal").innerHTML = "Các số vừa nhập là : " + numbers;
 }
 
 // 1. Tổng các số dương trong mảng.
-  function sum() {
+function sum() {
     let total = 0;
     for (let i = 0;  i < numbers.length; i++) {
         if (numbers[i] > 0 ) {
@@ -76,9 +77,7 @@ function change() {
     let inputs2 = +document.getElementById("input2").value;
 
     let numbers2 = numbers;
-
     let number2 = numbers2[inputs1];
-
     numbers2[inputs1] = numbers2[inputs2];
     numbers2[inputs2] = number2;
 
@@ -86,8 +85,8 @@ function change() {
 }
 // 7. Sắp xếp mảng theo thứ tự tăng dần.
 function swap() {
-
-    
+        let sortUp= numbers.sort((a, b) => a - b);
+        document.getElementById("swap").innerHTML =   "Mảng sau khi sắp xếp là : " + sortUp;     
 }
 // 8. Tìm số nguyên tố đầu tiên trong mảng.
 function check(number){
@@ -101,34 +100,44 @@ function check(number){
     return SNT;
 }
 function findPrime() {
-    let number = -1;
+    let number = "";
     for (let i = 0; i < numbers.length; i++) {
-        if(check(number)) {
+        let Prime = check(numbers[i]);
+        if(Prime && numbers[i] > 1) {
             number = numbers[i];
-        } break;
+        break;
+        }  else {
+            number = "-1";
+        }
     }
+
     document.getElementById("findPrime").innerHTML = "Số nguyên tố đầu tiên là: " + number ;
 }
 // 9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên?
 function add() {
     // DOM
-    let number1 = +document.getElementById("number1").value;
+    let numberint = +document.getElementById("number1").value;
+    
     // thêm số vào mảng
-    numbers1.push(number1);
-    document.getElementById("showInt").innerHTML = "Các số vừa nhập là : " + numbers1;
-  }
+    numbersint.push(numberint);
+    document.getElementById("showInt").innerHTML = "Các số vừa nhập là : " + numbersint;
+}
 function Int () {
-    let number1 = 0;
-    for (let i=0; i < numbers1.length; i++) {
-        number1.isInteger(numbers1[i]);
-        number1++;  
+    let numberint = 0;
+    for (let i=0; i < numbersint.length; i++) {
+        let dem = Number.isInteger(numbersint[i]);
+        if (dem) {
+        numberint++;  
+        }
     }
-    document.getElementById("Int").innerHTML = "Các số nguyên là: " + number1;
+    document.getElementById("Int").innerHTML = "Các số nguyên là: " + numberint;
 }
 // 10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.
 function vergelyk() {
-    let number1;
-    for (number=0, i=0, number1=0; number1 < numbers.length; number1++) {
+    let number1 =0;
+    let number=0;
+    let i;
+    for (i=0; number1 < numbers.length; number1++) {
         if (numbers[number1] > 0) {
             number++;
         } else if (numbers[number1] < 0) {
